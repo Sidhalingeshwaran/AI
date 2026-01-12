@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -7,24 +6,39 @@ body {
 }
 
 section {
-    padding: 100px 0 ;
+    padding: 100px 0;
 }
 
 /* NAVBAR */
 .navbar {
     background: rgba(21, 21, 30, 0.45);
     backdrop-filter: blur(10px);
+    min-height: 64px;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: 8px;
 }
+
 
 .nav-link {
     color: #000 !important;
 }
 
 .nav-logo {
-    height: 70px;
-    width: 100%;
-    margin: 10px;
+    height: 32px;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    display: block;
 }
+
+.navbar .container {
+    align-items: center;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
 
 
 /* HERO */
@@ -32,12 +46,11 @@ section {
     display: flex;
     align-items: center;
     background: linear-gradient(180deg,
-  #5B59CA 0%,
-  #806BC2 35%,
-  #A67DB8 55%,
-  #C78DB0 75%,
-  #E99DA8 100%
-);
+            #5B59CA 0%,
+            #806BC2 35%,
+            #A67DB8 55%,
+            #C78DB0 75%,
+            #E99DA8 100%);
     background-size: cover;
     height: 100vh;
     padding-top: 150px;
@@ -149,6 +162,7 @@ section {
 .industry-card:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
+
 .industry-icon {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
@@ -231,7 +245,7 @@ section {
     transition: all 0.35s ease;
 }
 
-.service-haed{
+.service-haed {
     color: #5B59CA;
     padding-bottom: 10px;
 }
@@ -382,7 +396,8 @@ section {
     transition: 0.35s ease;
     text-align: left;
 }
-.client-head{
+
+.client-head {
     color: #5B59CA;
     padding-bottom: 15px;
 }
@@ -441,7 +456,7 @@ section {
 
 /*FAQ*/
 
-.faq-head{
+.faq-head {
     color: #5B59CA;
 }
 
@@ -495,7 +510,7 @@ section {
     margin: 60px auto 20px;
     max-width: auto;
     border-color: rgba(255, 255, 255, 0.25);
-    background-color: #5B59CA ;
+    background-color: #5B59CA;
 }
 
 /* COPYRIGHT */
@@ -506,19 +521,23 @@ section {
 }
 
 /* GLOBAL RESPONSIVE FIXES */
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        height: 32px;
+        max-height: 32px;
+        width: auto;
+        display: block;
+    }
+}
+
+
 @media (max-width: 992px) {
     section {
         padding: 50px 0;
     }
 }
 
-
-@media (max-width: 480px) {
-    .nav-logo {
-        height: 40px;
-        width: 100%;
-    }
-}
 
 /* HERO SECTION – MOBILE & TABLET */
 @media (max-width: 768px) {
@@ -552,7 +571,7 @@ section {
 
 @media (max-width: 480px) {
 
-    .hero{
+    .hero {
         padding: 100px 0px 30px;
     }
 
